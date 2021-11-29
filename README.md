@@ -3,14 +3,14 @@
 ## Overview
 This project was undertaken to create a clean dataset of movies with their ratings for a hackathon to develop an algorithm to identify which low budget movies will become popular. This was achieved using ETL process
 
-## Extraction
+### Extraction
 The data was extracted from two sources:
 a. Wikipedia- json file with a list of movies, containing 193 columns and 7311 records
 b. Kaggle-Movie data as csv file, containing 24 columns and 45467 records
 c. Kaggle-Rating data from MovieLens as csv file, containing 4 columns and 26,024,289 records 
 Wikipedia data was used as base for list of movies to consider. All three files were transformed to remove duplicates, format columns, remove unncessary columns and other transformations.
 
-## Transformation
+### Transformation
 Wikipedia data:
 a. Filtered out movies that don't have a IMDB link and a Director ('Directed By','Director')
 b. Filtered out TV shows based on no. of episodes 
@@ -36,7 +36,7 @@ a. Grouped by movie ID and rating to obtain count for each rating.
 b. Merged rating count data with the movies dataframe to obtain a movies and ratings dataframe 
 c. Replaced ratings with null values with 0
 
-## Load
+### Load
 The movies dataframe and the ratings file were loaded into database.
 Movies dataset: The final cleaned data contained 31 columns and 6052 records
 Ratings dataset: Loaded in chunks since file was a large file with 26,024,289 records
