@@ -15,7 +15,7 @@ c. Kaggle-Rating data from MovieLens as csv file, containing 4 columns and 26,02
 Wikipedia data was used as base for list of movies to consider. All three files were transformed to remove duplicates, format columns, remove unncessary columns and other transformations.
 
 ### Transformation
-Wikipedia data:
+**Wikipedia data:
 
 a. Filtered out movies that don't have a IMDB link and a Director ('Directed By','Director')
 
@@ -33,21 +33,21 @@ g. Formatted the data so that they have same pattern or type (box office, budget
 
 h. Converted data to proper numeric or datetime format
 
-Kaggle Movie data:
+**Kaggle Movie data:
 
 a. Drop adult movies
 
 b. Convert data to proper numeric or datetime format
 
-Merge and Transform:
+**Merge and Transform:
 
 The two datasets were then merged on IMDB ID. The resulting mismatched columns were then analysed and decision was made to drop Wikipedia columns. In cases where there was missing data in Kaggle columns, data was copied from Wikipedia columnn and then the columns were dropped, using a function.
 
-Reorder and Rename:
+**Reorder and Rename:
 
 The columns in the final movies dataframe were then reordered and renamed for convenience
 
-Ratings data:
+**Ratings data:
 
 a. Grouped by movie ID and rating to obtain count for each rating.
 
